@@ -1,0 +1,88 @@
+/* 기본 스타일 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* 헤더 영역 */
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 1rem;
+}
+
+/* 섹션 스타일 */
+section {
+    padding: 2rem;
+    margin: 1rem 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about-me {
+    background-color: #e9ecef;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* 기술 스택 */
+#skills ul {
+    list-style-type: none;
+}
+
+#skills li {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 20px;
+}
+
+/* 프로젝트 섹션 */
+.project {
+    margin-bottom: 1.5rem;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #007BFF;
+    color: white;
+}
