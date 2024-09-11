@@ -15,18 +15,18 @@ body {
 
 /* 헤더 영역 */
 header {
-    background-color: #459bf8;
+    background-color: #86c0ff;
     color: white;
-    padding: 3rem 0;
+    padding: 5rem 0;
     text-align: center;
 }
 
 .profile-photo {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 /* ABOUT ME 스타일 */
@@ -35,7 +35,6 @@ header {
     padding: 2rem;
     margin: 1rem auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
 }
 
 /* ABOUT ME - 아이콘과 정보 정렬 */
@@ -85,7 +84,6 @@ p {
     margin: 1rem auto;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
 }
 
 /* 기술 카테고리 스타일 */
@@ -93,10 +91,10 @@ p {
     margin-bottom: 2rem;
 }
 
-.skills-category h3 {
+.skills-category h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #007BFF;
+    color: #fc9708;
 }
 
 /* 기술 리스트 스타일 */
@@ -116,25 +114,61 @@ p {
     text-align: center;
 }
 
-/* 프로젝트 섹션 */
+/* PROJECTS 섹션 스타일 */
+#projects {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 1000px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#projects h1 {
+    margin-bottom: 2rem;
+}
+
+/* 프로젝트 각각의 레이아웃 */
 .project {
-    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
-.project h3 {
-    font-size: 1.5rem;
+/* 프로젝트 이미지 스타일 */
+.project-image {
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.project-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 프로젝트 설명 스타일 */
+.project-description {
+    flex: 2;
+    text-align: left;
+}
+
+.project-description h2 {
     margin-bottom: 0.5rem;
+    color: #007BFF;
 }
 
-.project p {
+.project-description p {
+    color: #555;
     font-size: 1rem;
-    color: #666;
 }
+
 
 /* 푸터 */
 footer {
     text-align: center;
     padding: 1rem 0;
-    background-color: #459bf8;
+    background-color: #86c0ff;
     color: white;
 }

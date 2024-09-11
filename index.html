@@ -17,42 +17,41 @@
     </header>
 
     <!-- ABOUT ME -->
-    <!-- ABOUT ME -->
     <section id="about-me">
-        <h2>ABOUT ME</h2>
+        <h1><u>ABOUT ME</u></h1>
         <div class="info-grid">
             <div class="info-item">
                 <i class="fas fa-user"></i>
-                <span>이름: 윤호석</span>
+                <span><strong>이름</strong><br> 윤호석</span>
             </div>
             <div class="info-item">
                 <i class="fas fa-birthday-cake"></i>
-                <span>생년월일: 1997-02-16</span>
+                <span><strong>생년월일</strong><br> 1997-02-16</span>
             </div>
             <div class="info-item">
                 <i class="fas fa-map-marker-alt"></i>
-                <span>주소지: 경기도 김포시</span>
+                <span><strong>주소지</strong><br> 경기도 김포시</span>
             </div>
             <div class="info-item">
-                <i class="fas fa-phone"></i>
-                <span>연락처: 010-2062-9089</span>
+                <i class="fa-brands fa-github"></i>
+                <span><strong>깃허브</strong><br> <a href="https://github.com/otfeb">https://github.com/otfeb</a></span>
             </div>
             <div class="info-item">
                 <i class="fas fa-envelope"></i>
-                <span>이메일: apeltms97@gmail.com</span>
+                <span><strong>이메일</strong><br> apeltms97@gmail.com</span>
             </div>
             <div class="info-item">
                 <i class="fas fa-graduation-cap"></i>
-                <span>학력: 을지대학교(식품산업외식학과)</span>
+                <span><strong>학력</strong><br> 을지대학교<br>(식품산업외식학과)</span>
             </div>
         </div>
     </section>
 
     <!-- SKILLS -->
     <section id="skills">
-        <h2>SKILLS</h2>
+        <h1><u>SKILLS</u></h1>
         <div class="skills-category">
-            <h3>Backend</h3>
+            <h2>Backend</h2>
             <ul>
                 <li>Java</li>
                 <li>Spring</li>
@@ -65,21 +64,21 @@
             </ul>
         </div>
         <div class="skills-category">
-            <h3>Frontend</h3>
+            <h2>Frontend</h2>
             <ul>
                 <li>HTML/CSS</li>
                 <li>JavaScript</li>
             </ul>
         </div>
         <div class="skills-category">
-            <h3>Database</h3>
+            <h2>Database</h2>
             <ul>
                 <li>MySQL</li>
                 <li>Redis</li>
             </ul>
         </div>
         <div class="skills-category">
-            <h3>Tools</h3>
+            <h2>Tools</h2>
             <ul>
                 <li>IntelliJ</li>
                 <li>VSCode</li>
@@ -94,14 +93,56 @@
 
     <!-- PROJECTS -->
     <section id="projects">
-        <h2>PROJECTS</h2>
+        <h1><u>PROJECTS</u></h1>
+    
         <div class="project">
-            <h3>프로젝트 1</h3>
-            <p>프로젝트 설명</p>
+            <div class="project-image">
+                <img src="/images/Handtris_Poster.png" alt="Handtris 프로젝트 이미지">
+            </div>
+            <div class="project-description">
+                <h2>Handtris</h2>
+                <p>
+                    핸드 모션을 활용한 실시간 1:1 대결 테트리스 게임
+
+                    💡**담당한 기능**
+
+                        - **WebSocket `STOMP` 프로토콜을 사용하여 실시간성 보장**
+                            - 테트리스 블록의 좌표값, 컬러 등의 정보를 Text형식으로 상대방 유저에게 전달
+                        - **Redis 캐시를 이용하여 API 호출 시간 단축**
+                            - 게임방과 유저 정보를 매핑해 저장
+                            - 유저가 나가면 Redis에서 정보 삭제
+                        - **ChannelInterceptor를 이용해 요청 전처리**
+                            - 메시지를 가로채 어떤 요청인지 확인하거나 수정
+                            - 나의 블록 정보를 보낼 때, 나도 그 메시지를 받아서 화면에 나의 블록과 상대방의 블록이 겹쳐서 그려지는 현상 발생
+                                - Interceptor에서 상대방 정보를 Header에 담아 해당 API에 전달
+                                - 블록 정보 전달 API에서 Header에 담긴 상대방에게만 메시지를 보내도록 수정
+                            - 비정상적인 종료로 인한 연결 해제 요청일 경우 API를 호출하지 않아 Redis와 DB의 정합성이 깨지는 현상 발생
+                                - 연결 해제 요청이 올 경우 특정 메시지도 같이 전송
+                                - Interceptor에서 이를 확인하고 정상적으로 API를 호출할 수 있도록 유도
+                        - **Junit과 Mockito를 이용한 유닛 단위 테스트 작성**
+                </p>
+            </div>
         </div>
+    
         <div class="project">
-            <h3>프로젝트 2</h3>
-            <p>프로젝트 설명</p>
+            <div class="project-image">
+                <img src="/images/crython_main.png" alt="프로젝트 2 이미지">
+            </div>
+            <div class="project-description">
+                <h2>CRYTHON</h2>
+                <p>
+                    Digital Document 보안 솔루션
+
+                    💡**담당한 기능**
+
+                        - **파일 업로드 및 다운로드 API**
+                            - Google Cloud Storage(GCS) 연동
+                            - CloudSQL 연동 및 파일 메타 데이터 저장
+                            - GCS에서 파일 객체 관리
+                        - **파일 공유 API**
+                            - Join문 사용하여 본인이 업로드한 파일뿐만 아니라 공유 받은 파일도 조회되도록 수정
+                </p>
+            </div>
         </div>
     </section>
 
