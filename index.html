@@ -100,13 +100,26 @@
         <h1><u>PROJECTS</u></h1>
         <br>
         <div class="project">
-            <div class="project-image">
-                <img src="/images/Handtris_Poster.png" alt="Handtris 프로젝트 이미지">
+            <div class="project-slider">
+                <div class="slider-container">
+                    <img class="slider-image" src="/images/handtris/Handtris01.png" alt="Handtris 로그인 화면">
+                    <img class="slider-image" src="/images/handtris/Handtris02.png" alt="Handtris 게임 화면">
+                    <img class="slider-image" src="/images/handtris/Handtris_Architecture.png" alt="Handtris 아키텍쳐">
+                    <img class="slider-image" src="/images/handtris/Handtris_NetworkFlow.png" alt="Handtris 네트워크 플로우">
+                    <img class="slider-image" src="/images/handtris/Handtris_Poster.png" alt="Handtris 포스터">
+                </div>
+                <div class="slider-buttons">
+                    <span class="prev">&#10094;</span>
+                    <span class="next">&#10095;</span>
+                </div>
             </div>
             <div class="project-description">
                 <h2>Handtris</h2>
+                <p class="project-period">2024.06 ~ 2024.07</p>
                 <p><strong>핸드 모션을 활용한 실시간 1:1 대결 테트리스 게임</strong></p>
+                <br>
                 <p>💡<strong>담당한 기능</strong></p>
+                <br>
                 <ul>
                     <li>
                         <strong>WebSocket `STOMP` 프로토콜을 사용하여 실시간성 보장</strong>
@@ -117,33 +130,57 @@
                     <li>
                         <strong>Redis 캐시를 이용하여 API 호출 시간 단축</strong>
                         <ul>
-                            <li>게임방과 유저 정보를 매핑해 저장, 유저가 나가면 Redis에서 정보 삭제</li>
+                            <li>게임방과 유저 정보를 매핑해 저장</li>
+                            <li>유저가 나가면 Redis에서 정보 삭제</li>
                         </ul>
                     </li>
                     <li>
                         <strong>ChannelInterceptor를 이용해 요청 전처리</strong>
                         <ul>
-                            <li>메시지를 가로채 요청 확인 및 수정, Interceptor에서 상대방 정보를 Header에 담아 해당 API에 전달</li>
+                            <li>메시지를 가로채 요청 확인 및 수정</li>
+                            <li>나의 블록 정보를 보낼 때, 나도 그 메시지를 받아서 화면에 나의 블록과 상대방의 블록이 겹쳐서 그려지는 현상 발생</li>
+                            <ul>
+                                <li>Interceptor에서 상대방 정보를 Header에 담아 블록 정보 전달 API에 전달</li>
+                                <li>블록 정보 전달 API에서 Header에 담긴 상대방에게만 메시지를 보내도록 수정</li>
+                            </ul>
+                            <li>비정상적인 종료로 인한 연결 해제 요청일 경우 API를 호출하지 않아 Redis와 DB의 정합성이 깨지는 현상 발생</li>
+                            <ul>
+                                <li>소켓 연결이 해제되면 클라이언트에서 특정 메시지 전송</li>
+                                <li>Interceptor에서 이를 확인하고 정상적으로 API를 호출할 수 있도록 유도</li>
+                            </ul>
                         </ul>
                     </li>
                     <li><strong>Junit과 Mockito를 이용한 유닛 단위 테스트 작성</strong></li>
                 </ul>
+                <br>
+                <i class="fa-brands fa-github"></i>
+                깃허브 : <a class="info-git" href="https://github.com/otfeb/BE-HandTris">https://github.com/otfeb/BE-HandTris</a>
             </div>
         </div>
     
         <div class="project">
-            <div class="project-image">
-                <img src="/images/crython_main.png" alt="프로젝트 2 이미지">
+            <div class="project-slider">
+                <div class="slider-container">
+                    <img class="slider-image" src="/images/crython/main.png" alt="Crython 메인">
+                    <img class="slider-image" src="/images/crython/home.png" alt="Crython 홈">
+                    <img class="slider-image" src="/images/crython/architecture.png" alt="Crython 아키텍쳐">
+                </div>
+                <div class="slider-buttons">
+                    <span class="prev">&#10094;</span>
+                    <span class="next">&#10095;</span>
+                </div>
             </div>
             <div class="project-description">
                 <h2>CRYTHON</h2>
+                <p class="project-period">2024.08</p>
                 <p><strong>Digital Document 보안 솔루션</strong></p>
                 <p>💡<strong>담당한 기능</strong></p>
                 <ul>
                     <li>
                         <strong>파일 업로드 및 다운로드 API</strong>
                         <ul>
-                            <li>Google Cloud Storage(GCS) 연동, CloudSQL 연동 및 파일 메타 데이터 저장</li>
+                            <li>Google Cloud Storage(GCS) 연동 및 파일 객체 저장</li>
+                            <li>CloudSQL 연동 및 파일 메타 데이터 저장</li>
                         </ul>
                     </li>
                     <li>
@@ -153,10 +190,12 @@
                         </ul>
                     </li>
                 </ul>
+                <br>
+                <i class="fa-brands fa-github"></i>
+                깃허브 : <a class="info-git" href="https://github.com/crython-guardians/crython-server">https://github.com/crython-guardians/crython-server</a>
             </div>
         </div>
     </section>
-    
 
     <!-- 스크롤 가능한 영역 -->
     <footer>
