@@ -102,8 +102,8 @@
         <div class="project">
             <div class="project-description">
                 <h2>CRYTHON</h2>
-                <p>2024.08.03 ~ 2024.08.13</p>
-                <p><strong>Digital Document 보안 솔루션</strong></p>
+                <p class="project-period">2024.08.03 ~ 2024.08.13</p>
+                <h4><strong>Digital Document 보안 솔루션</strong></h4>
                 <br>
                 <div class="project-images">
                     <div class="project-slider">
@@ -148,14 +148,14 @@
             </div>
         </div>
 
-        <hr>
+        <hr class="division">
 
         <!-- 두 번째 프로젝트 -->
-        <div class="project"></div>
+        <div class="project">
             <div class="project-description">
                 <h2>Handtris</h2>
-                <p>2024.06.17 ~ 2024.07.20</p>
-                <p><strong>핸드 모션을 활용한 실시간 1:1 대결 테트리스 게임</strong></p>
+                <p class="project-period">2024.06.17 ~ 2024.07.20</p>
+                <h4><strong>핸드 모션을 활용한 실시간 1:1 대결 테트리스 게임</strong></h4>
                 <br>
                 <div class="project-images">
                     <div class="project-slider">
@@ -165,7 +165,14 @@
                             <img class="slider-image" src="/images/handtris/Handtris03.png" alt="Handtris 준비 화면">
                             <img class="slider-image" src="/images/handtris/Handtris_Architecture.png" alt="Handtris 아키텍쳐">
                             <img class="slider-image" src="/images/handtris/Handtris_NetworkFlow.png" alt="Handtris 네트워크 플로우">
-                            <img class="slider-image" src="/images/handtris/Handtris_poster.png" alt="Handtris 포스터">
+                            <div class="video-container">
+                                <!-- preload="metadata" 속성 없이 테스트 -->
+                                <video id="handtrisVideo">
+                                    <source src="/videos/demo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <button id="playVideo">▶ 재생</button>
+                            </div>
                         </div>
                         <div class="slider-buttons">
                             <span class="prev">&#10094;</span>
@@ -173,6 +180,7 @@
                         </div>
                         <!-- 페이지 구분자 추가 -->
                         <div class="slider-dots">
+                            <span class="dot"></span>
                             <span class="dot"></span>
                             <span class="dot"></span>
                             <span class="dot"></span>
@@ -222,14 +230,14 @@
             </div>
         </div>
 
-        <hr>
+        <hr class="division">
 
         <!-- 세번째 프로젝트 -->
-        <div class="project"></div>
+        <div class="project">
             <div class="project-description">
                 <h2>4B</h2>
-                <p>2023.11.10 ~ 2023.12.05</p>
-                <p><strong>온라인 중고 거래 사이트</strong></p>
+                <p class="project-period">2023.11.10 ~ 2023.12.05</p>
+                <h4><strong>온라인 중고 거래 사이트</strong></h4>
                 <br>
                 <div class="project-images">
                     <div class="project-slider">
@@ -283,64 +291,63 @@
             </div>
         </div>
 
+        <hr class="division">
+
         <!-- 네번째 프로젝트 -->
-        <div class="project"></div>
-        <div class="project-description">
-            <h2>HYUGO</h2>
-            <p>2023.09.08 ~ 2023.09.22</p>
-            <p><strong>음식 주문과 입점 업체 이용 고객들이 리뷰를 남길 수 있는 휴게소 사이트</strong></p>
-            <br>
-            <div class="project-images">
-                <div class="project-slider">
-                    <div class="slider-container">
-                        <img class="slider-image" src="/images/hyugo/shopmenu1.gif" alt="">
-                        <img class="slider-image" src="/images/hyugo/shopmenu2.gif" alt="">
-                        <img class="slider-image" src="/images/hyugo/human1.gif" alt="">
-                        <img class="slider-image" src="/images/hyugo/human2.gif" alt="">
-                    </div>
-                    <div class="slider-buttons">
-                        <span class="prev">&#10094;</span>
-                        <span class="next">&#10095;</span>
-                    </div>
-                    <!-- 페이지 구분자 추가 -->
-                    <div class="slider-dots">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
+        <div class="project">
+            <div class="project-description">
+                <h2>HYUGO</h2>
+                <p class="project-period">2023.09.08 ~ 2023.09.22</p>
+                <h4><strong>음식 주문과 입점 업체 이용 고객들이 리뷰를 남길 수 있는 휴게소 사이트</strong></h4>
+                <br>
+                <div class="project-images">
+                    <div class="project-slider">
+                        <div class="slider-container">
+                            <img class="slider-image" src="/images/hyugo/shopmenu1.gif" alt="">
+                            <img class="slider-image" src="/images/hyugo/shopmenu2.gif" alt="">
+                            <img class="slider-image" src="/images/hyugo/human1.gif" alt="">
+                            <img class="slider-image" src="/images/hyugo/human2.gif" alt="">
+                        </div>
+                        <div class="slider-buttons">
+                            <span class="prev">&#10094;</span>
+                            <span class="next">&#10095;</span>
+                        </div>
+                        <!-- 페이지 구분자 추가 -->
+                        <div class="slider-dots">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
                     </div>
                 </div>
+                <br>
+                <p>💡<strong>담당한 기능</strong></p>
+                <br><br>
+                <ul>
+                    <li>
+                        <strong>매장 페이지 설계 및 구현</strong>
+                        <ul>
+                            <li>각 매장의 메뉴 CRUD 기능</li>
+                            <li>카테고리별 메뉴 조회</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>휴면 계정 기능</strong>
+                        <ul>
+                            <li>가입 후 일정 기간 로그인하지 않을 경우 휴면 계정 전환 및 해제 기능 구현</li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                <i class="fa-brands fa-github"></i>
+                깃허브 : <a class="info-git" href="https://github.com/otfeb/Sist_SemiProject">https://github.com/otfeb/Sist_SemiProject</a>
             </div>
-            <br>
-            <p>💡<strong>담당한 기능</strong></p>
-            <br><br>
-            <ul>
-                <li>
-                    <strong>매장 페이지 설계 및 구현</strong>
-                    <ul>
-                        <li>각 매장의 메뉴 CRUD 기능</li>
-                        <li>카테고리별 메뉴 조회</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>휴면 계정 기능</strong>
-                    <ul>
-                        <li>가입 후 일정 기간 로그인하지 않을 경우 휴면 계정 전환 및 해제 기능 구현</li>
-                    </ul>
-                </li>
-            </ul>
-            <br>
-            <i class="fa-brands fa-github"></i>
-            깃허브 : <a class="info-git" href="https://github.com/otfeb/Sist_SemiProject">https://github.com/otfeb/Sist_SemiProject</a>
         </div>
-    </div>
 
     </section>
 
-    <!-- 스크롤 가능한 영역 -->
-    <footer>
-        <p>© 2024 OOO. All rights reserved.</p>
-    </footer>
+    <button id="scrollTopBtn">↑</button>
 
     <!-- JavaScript 파일 추가 -->
     <script src="script.js"></script>

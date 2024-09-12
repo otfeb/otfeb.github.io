@@ -53,6 +53,12 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
 h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
@@ -132,8 +138,8 @@ p {
 
 .skills-category li {
     display: inline-block;
-    background-color: #007BFF;
-    color: white;
+    background-color: darkolivegreen;
+    color: rgb(77, 77, 77);
     padding: 0.5rem 1rem;
     margin: 0.3rem;
     border-radius: 20px;
@@ -144,10 +150,6 @@ p {
 /* PROJECTS 섹션 스타일 */
 #projects {
     background-color: white;
-}
-
-#projects h1 {
-    margin-bottom: 2rem;
 }
 
 /* 프로젝트 각각의 레이아웃 */
@@ -162,18 +164,13 @@ p {
 .project-description {
     flex: 2;
     text-align: left;
-    padding-left: 5rem; /* 왼쪽에 패딩을 추가하여 중앙에서 벗어나지 않도록 함 */
+    padding-left: 10rem; /* 왼쪽에 패딩을 추가하여 중앙에서 벗어나지 않도록 함 */
     margin: 0 auto; /* 가운데에 위치하게 유지 */
 }
 
 .project-description h2 {
     margin-bottom: 0.5rem;
     color: #007BFF;
-}
-
-.project-description p {
-    color: #555;
-    font-size: 1rem;
 }
 
 .project-description ul ul {
@@ -203,14 +200,25 @@ p {
 .slider-image {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* 이미지가 고정된 크기에 맞춰지도록 */
-    display: none; /* 기본적으로 모든 이미지는 숨겨둠 */
+    object-fit: contain;
+    display: block; /* 이미지를 보이도록 수정 */
+    transition: transform 0.5s ease-in-out; /* 슬라이드 애니메이션 추가 */
+    position: absolute; /* 이미지가 겹쳐서 쌓이도록 설정 */
+    left: 100%; /* 기본 위치는 화면 밖 */
 }
 
 .slider-image.active {
-    display: block; /* 활성화된 이미지만 보임 */
+    left: 0; /* 활성화된 이미지는 가운데 위치 */
+    transform: translateX(0); /* 가운데 위치시키기 */
 }
 
+.slider-image.prev {
+    transform: translateX(-100%); /* 이전 이미지는 왼쪽으로 나감 */
+}
+
+.slider-image.next {
+    transform: translateX(100%); /* 다음 이미지는 오른쪽에서 들어옴 */
+}
 
 /* 좌우 화살표 버튼 */
 .slider-buttons .prev, 
@@ -267,11 +275,35 @@ p {
     background-color: #717171;
 }
 
+/* Handtris 비디오 */
+.video-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-/* 푸터 */
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #cea471;
+video {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* 최상단 이동 버튼 */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #007BFF;
     color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none; /* 기본적으로 숨겨둠 */
+}
+
+#scrollTopBtn:hover {
+    background-color: #0056b3;
 }
