@@ -145,20 +145,6 @@ p {
     flex-wrap: wrap;
 }
 
-/* 프로젝트 이미지 스타일 */
-.project-image {
-    flex: 1;
-    padding-right: 1.5rem;
-}
-
-.project-image img {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 /* 프로젝트 설명 스타일 */
 .project-description {
     flex: 2;
@@ -188,22 +174,28 @@ p {
 .project-slider {
     position: relative;
     max-width: 800px; /* 슬라이더의 최대 너비 */
+    height: 450px; /* 이미지 높이를 일정하게 고정 */
     margin: 0 auto;
 }
 
 .slider-container {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 .slider-image {
     width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 고정된 크기에 맞춰지도록 */
     display: none; /* 기본적으로 모든 이미지는 숨겨둠 */
 }
 
 .slider-image.active {
     display: block; /* 활성화된 이미지만 보임 */
 }
+
 
 /* 좌우 화살표 버튼 */
 .slider-buttons .prev, 
