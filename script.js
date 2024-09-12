@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         images[currentIndex].classList.add('active');
         dots[currentIndex].classList.add('active'); // 초기 페이지 구분자 활성화
 
-        // 이미지 전환 함수
+        // 이미지 전환
         function showSlide(index) {
             images.forEach((img, i) => img.classList.toggle('active', i === index));
             dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
