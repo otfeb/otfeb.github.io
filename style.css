@@ -17,7 +17,7 @@ body {
 header {
     background-color: #86c0ff;
     color: white;
-    padding: 5rem 0;
+    padding: 4.5rem 0;
     text-align: center;
 }
 
@@ -35,6 +35,7 @@ header {
     padding: 2rem;
     margin: 1rem auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
 }
 
 /* ABOUT ME - 아이콘과 정보 정렬 */
@@ -58,6 +59,11 @@ header {
 
 .info-item span {
     font-size: 1rem;
+}
+
+.info-git {
+    text-decoration-line: none;
+    text-decoration-color: black;
 }
 
 /* 섹션 스타일 */
@@ -84,6 +90,7 @@ p {
     margin: 1rem auto;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
 }
 
 /* 기술 카테고리 스타일 */
@@ -142,7 +149,7 @@ p {
 
 .project-image img {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
