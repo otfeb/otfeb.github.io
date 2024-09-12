@@ -29,19 +29,34 @@ header {
     margin-top: 2.5rem;
 }
 
+/* 섹션 스타일 */
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 1000px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+}
+
 /* ABOUT ME 스타일 */
 #about-me {
     background-color: #e9ecef;
-    padding: 2rem;
-    margin: 1rem auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
 }
 
 /* ABOUT ME - 아이콘과 정보 정렬 */
 .info-grid {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
@@ -49,7 +64,7 @@ header {
 .info-item {
     display: flex;
     align-items: center;
-    width: 250px; /* 각 정보 항목의 너비 */
+    flex-basis: calc(33.333% - 1rem);
 }
 
 .info-item i {
@@ -66,31 +81,22 @@ header {
     text-decoration-color: black;
 }
 
-/* 섹션 스타일 */
-section {
-    padding: 2rem;
-    margin: 1rem 0;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* 반응형 처리: 화면이 좁아질 때 2개씩, 1개씩 배치 */
+@media (max-width: 768px) {
+    .info-item {
+        flex-basis: calc(50% - 1rem); /* 2개씩 배치 */
+    }
 }
 
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-p {
-    font-size: 1rem;
-    color: #555;
+@media (max-width: 480px) {
+    .info-item {
+        flex-basis: 100%; /* 1개씩 배치 */
+    }
 }
 
 /* SKILLS 섹션 스타일 */
 #skills {
-    padding: 2rem;
-    margin: 1rem auto;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
 }
 
 /* 기술 카테고리 스타일 */
@@ -123,11 +129,7 @@ p {
 
 /* PROJECTS 섹션 스타일 */
 #projects {
-    padding: 2rem;
-    margin: 1rem auto;
-    max-width: 1000px;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #projects h1 {
@@ -139,6 +141,7 @@ p {
     display: flex;
     align-items: center;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
 /* 프로젝트 이미지 스타일 */
@@ -149,7 +152,7 @@ p {
 
 .project-image img {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -170,6 +173,8 @@ p {
     color: #555;
     font-size: 1rem;
 }
+
+/* 기본 리스트 스타일 제거 */
 
 
 /* 푸터 */
