@@ -184,6 +184,62 @@ p {
     color: lightgray;
 }
 
+/* 슬라이더 스타일 */
+.project-slider {
+    position: relative;
+    max-width: 800px; /* 슬라이더의 최대 너비 */
+    margin: 0 auto;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-image {
+    width: 100%;
+    display: none; /* 기본적으로 모든 이미지는 숨겨둠 */
+}
+
+.slider-image.active {
+    display: block; /* 활성화된 이미지만 보임 */
+}
+
+/* 좌우 화살표 버튼 */
+.slider-buttons .prev, 
+.slider-buttons .next {
+    position: absolute;
+    top: 50%;
+    padding: 1rem;
+    color: white;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-radius: 50%;
+    display: none; /* 기본 상태에서 숨김 */
+    z-index: 1;
+}
+
+.slider-buttons .prev {
+    left: 10px;
+}
+
+.slider-buttons .next {
+    right: 10px;
+}
+
+/* 마우스를 올리면 화살표가 나타나도록 설정 */
+.project-slider:hover .prev, 
+.project-slider:hover .next {
+    display: block;
+}
+
+/* 화살표 버튼 호버 스타일 */
+.slider-buttons .prev:hover, 
+.slider-buttons .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 /* 푸터 */
 footer {
     text-align: center;
