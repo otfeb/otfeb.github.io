@@ -6,22 +6,36 @@ document.addEventListener("DOMContentLoaded", function() {
         const images = slider.querySelectorAll('.slider-image');
         const prevButton = slider.querySelector('.prev');
         const nextButton = slider.querySelector('.next');
+        const dots = slider.querySelectorAll('.dot'); // 페이지 구분자
 
         // 초기 상태: 첫 번째 이미지를 보이게 설정
         images[currentIndex].classList.add('active');
+        dots[currentIndex].classList.add('active'); // 초기 페이지 구분자 활성화
+
+        // 이미지 전환 함수
+        function showSlide(index) {
+            images.forEach((img, i) => img.classList.toggle('active', i === index));
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+        }
 
         // 이전 이미지로 이동
         prevButton.addEventListener('click', function() {
-            images[currentIndex].classList.remove('active');
             currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
-            images[currentIndex].classList.add('active');
+            showSlide(currentIndex);
         });
 
         // 다음 이미지로 이동
         nextButton.addEventListener('click', function() {
-            images[currentIndex].classList.remove('active');
             currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
-            images[currentIndex].classList.add('active');
+            showSlide(currentIndex);
+        });
+
+        // 페이지 구분자 클릭 시 이미지 전환
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+                currentIndex = index;
+            });
         });
     });
 });

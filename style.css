@@ -232,6 +232,27 @@ p {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* 슬라이더 페이지 구분자 */
+.slider-dots {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+
 /* 푸터 */
 footer {
     text-align: center;
