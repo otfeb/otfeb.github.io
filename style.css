@@ -15,10 +15,25 @@ body {
 
 /* 헤더 영역 */
 header {
-    background-color: #cea471;
+    position: relative;
     color: white;
     padding: 4.5rem 0;
     text-align: center;
+    z-index: 1;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/banner01.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
 }
 
 .profile-photo {
@@ -65,16 +80,16 @@ p {
     display: flex;
     align-items: center;
     flex-basis: calc(33.333% - 1rem);
+    text-align: center;
 }
 
 .info-item i {
     font-size: 1.5rem;
-    margin-right: 0.5rem;
+    margin-right: 2rem;
 }
 
 .info-item span {
     font-size: 1rem;
-    margin-left: 5px;
 }
 
 .info-git {
@@ -148,7 +163,7 @@ p {
 /* 프로젝트 설명 스타일 */
 .project-description {
     flex: 2;
-    text-align: left;
+    text-align: center;
 }
 
 .project-description h2 {
@@ -174,7 +189,7 @@ p {
 .project-slider {
     position: relative;
     max-width: 800px; /* 슬라이더의 최대 너비 */
-    height: 450px; /* 이미지 높이를 일정하게 고정 */
+    height: 800px; /* 이미지 높이를 일정하게 고정 */
     margin: 0 auto;
 }
 
