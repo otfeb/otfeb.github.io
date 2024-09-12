@@ -13,6 +13,10 @@ body {
     text-align: center;
 }
 
+.division{
+    color: rgb(179, 179, 179);
+}
+
 /* 헤더 영역 */
 header {
     position: relative;
@@ -29,7 +33,7 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/images/banner01.jpg);
+    background-image: url(/images/banner/banner02.jpg);
     background-size: cover;
     background-position: center;
     opacity: 0.5;
@@ -42,6 +46,7 @@ header::before {
     border-radius: 50%;
     object-fit: cover;
     margin-top: 2rem;
+    opacity: 0.8;
 }
 
 /* 섹션 스타일 */
@@ -61,6 +66,7 @@ section h1 {
 
 h2 {
     font-size: 1.8rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -138,8 +144,8 @@ p {
 
 .skills-category li {
     display: inline-block;
-    background-color: darkolivegreen;
-    color: rgb(77, 77, 77);
+    background-color: lightslategray;
+    color: white;
     padding: 0.5rem 1rem;
     margin: 0.3rem;
     border-radius: 20px;
@@ -179,14 +185,15 @@ p {
 }
 
 .project-period {
-    color: lightgray;
+    color: rgb(179, 179, 179);
 }
 
 /* 슬라이더 스타일 */
 .project-slider {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 900px;
-    height: 600px;
     margin: 0 auto;
 }
 
@@ -201,23 +208,14 @@ p {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    display: block; /* 이미지를 보이도록 수정 */
-    transition: transform 0.5s ease-in-out; /* 슬라이드 애니메이션 추가 */
-    position: absolute; /* 이미지가 겹쳐서 쌓이도록 설정 */
-    left: 100%; /* 기본 위치는 화면 밖 */
+    opacity: 0; /* 기본적으로 이미지를 숨김 */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 부드러운 전환 효과 추가 */
+    position: absolute; /* 겹쳐서 쌓이게 설정 */
 }
 
 .slider-image.active {
-    left: 0; /* 활성화된 이미지는 가운데 위치 */
-    transform: translateX(0); /* 가운데 위치시키기 */
-}
-
-.slider-image.prev {
-    transform: translateX(-100%); /* 이전 이미지는 왼쪽으로 나감 */
-}
-
-.slider-image.next {
-    transform: translateX(100%); /* 다음 이미지는 오른쪽에서 들어옴 */
+    opacity: 1; /* 활성화된 이미지만 보임 */
+    transform: translateX(0); /* 활성화된 이미지는 위치 고정 */
 }
 
 /* 좌우 화살표 버튼 */
@@ -294,16 +292,25 @@ video {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    background-color: #007BFF;
+    background-color: #ccc;
     color: white;
     border: none;
     border-radius: 50%;
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    display: none; /* 기본적으로 숨겨둠 */
+    display: none; /* 기본적으로 숨김 */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* 호버 시 색상 변경 및 확대 효과 */
 #scrollTopBtn:hover {
-    background-color: #0056b3;
+    background-color: #888; /* 호버 시 좀 더 진한 회색 */
+    transform: scale(1.1); /* 살짝 커짐 */
+}
+
+/* Font Awesome 아이콘 크기 조정 */
+#scrollTopBtn i {
+    font-size: 1.5rem;
 }

@@ -14,10 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // 이미지 전환
         function showSlide(index) {
             images.forEach((img, i) => {
-                img.classList.remove('active', 'prev', 'next');
-                if (i === index) img.classList.add('active');
-                else if (i < index) img.classList.add('prev');
-                else img.classList.add('next');
+                img.classList.toggle('active', i === index);
             });
             dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
         }

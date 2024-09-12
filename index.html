@@ -167,11 +167,10 @@
                             <img class="slider-image" src="/images/handtris/Handtris_NetworkFlow.png" alt="Handtris 네트워크 플로우">
                             <div class="video-container">
                                 <!-- preload="metadata" 속성 없이 테스트 -->
-                                <video id="handtrisVideo">
+                                <video id="handtrisVideo" controls>
                                     <source src="/videos/demo.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
-                                <button id="playVideo">▶ 재생</button>
                             </div>
                         </div>
                         <div class="slider-buttons">
@@ -347,7 +346,10 @@
 
     </section>
 
-    <button id="scrollTopBtn">↑</button>
+    <!-- 최상단 이동 버튼 -->
+    <button id="scrollTopBtn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <!-- JavaScript 파일 추가 -->
     <script src="script.js"></script>
