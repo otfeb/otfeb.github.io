@@ -15,7 +15,7 @@ body {
 
 /* 헤더 영역 */
 header {
-    background-color: #86c0ff;
+    background-color: #cc985a;
     color: white;
     padding: 4.5rem 0;
     text-align: center;
@@ -26,14 +26,14 @@ header {
     height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
 }
 
 /* 섹션 스타일 */
 section {
     padding: 2rem;
     margin: 1rem auto;
-    max-width: 1000px;
+    max-width: 1200px;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -139,7 +139,7 @@ p {
 /* 프로젝트 각각의 레이아웃 */
 .project {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 2rem;
     flex-wrap: wrap;
 }
@@ -147,12 +147,12 @@ p {
 /* 프로젝트 이미지 스타일 */
 .project-image {
     flex: 1;
-    padding-right: 1rem;
+    padding-right: 1.5rem;
 }
 
 .project-image img {
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -174,13 +174,16 @@ p {
     font-size: 1rem;
 }
 
-/* 기본 리스트 스타일 제거 */
+.project-description ul ul {
+    list-style-type: disc; /* 하위 설명에 불릿 리스트 추가 */
+    margin-left: 1.5rem; /* 하위 리스트 들여쓰기 */
+}
 
 
 /* 푸터 */
 footer {
     text-align: center;
     padding: 1rem 0;
-    background-color: #86c0ff;
+    background-color: #cc985a;
     color: white;
 }
