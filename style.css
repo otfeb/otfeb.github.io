@@ -161,9 +161,13 @@ h4 {
     text-align: center;
 }
 
+.category {
+    margin-top: 2rem;
+}
+
 /* PROJECTS 섹션 */
 #projects {
-    background-color: beige;
+    background-color: rgb(255, 255, 240);
 }
 
 /* 프로젝트 각각의 레이아웃 */
@@ -297,7 +301,7 @@ video {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    background-color: #ccc;
+    background-color: #c9c9c9;
     color: white;
     border: none;
     border-radius: 50%;
