@@ -10,18 +10,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // 초기 상태: 첫 번째 이미지를 보이게 설정
         images[currentIndex].classList.add('active');
+        dots[currentIndex].classList.add('active');
 
         // 이미지 전환
         function showSlide(index) {
-            images.forEach((img, i) => {
-                img.classList.remove('active');  // 모든 이미지에서 'active' 제거
-                if (i === index) {
-                    img.classList.add('active'); // 해당 인덱스에 'active' 추가
-                }
-            });
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index); // 활성화된 이미지에 dot 표시
-            });
+            images.forEach((img, i) => img.classList.toggle('active', i === index));
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
         }
 
         // 이전 이미지로 이동
