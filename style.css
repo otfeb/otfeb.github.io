@@ -152,7 +152,7 @@ h4 {
 
 .skills-category li {
     display: inline-block;
-    background-color: rgb(126, 157, 187);
+    background-color: rgb(228, 255, 229);
     color: white;
     padding: 0.5rem 1rem;
     margin: 0.3rem;
@@ -167,7 +167,7 @@ h4 {
 
 /* PROJECTS 섹션 */
 #projects {
-    background-color: rgb(255, 255, 240);
+    background-color: #f5f7f8;
 }
 
 /* 프로젝트 각각의 레이아웃 */
