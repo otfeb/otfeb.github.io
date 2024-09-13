@@ -219,6 +219,7 @@ h4 {
     object-fit: contain;
     display: none; /* 기본적으로 이미지를 숨김 */
     height: 550px;
+    margin-top: 2rem;
 }
 
 .slider-image.active {
