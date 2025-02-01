@@ -107,6 +107,119 @@
     <!-- PROJECTS 섹션 -->
     <section id="projects">
         <h1><u>PROJECTS</u></h1>
+
+        <!-- 첫 번째 프로젝트 -->
+        <div class="project">
+            <div class="project-description">
+                <h2>KickConnect</h2>
+                <p class="project-period">2025.01.13 ~ 2025.01.30</p>
+                <h4><strong>풋살 소셜 매치 통합 플랫폼</strong></h4>
+                <p>
+                    풋살 소셜 매치 경기 정보를 한눈에 비교하고 필터링할 수 있는 통합 플랫폼을 개발하였습니다.<br>
+                    다양한 풋살 소셜 매치 웹사이트에서 경기 데이터를 수집하여 제공하며, 사용자의 선호도에 맞게 필터링할 수 있도록 설계하였습니다.
+                </p>
+                <br>
+                <p><strong>KickConnect 주소:</strong> <a href="https://kick-connect-nine.vercel.app"
+                        target="_blank">https://kick-connect-nine.vercel.app</a></p>
+                <br>
+                <p class="role">💡<strong>구현 내용</strong></p>
+                <br>
+                <ul>
+                    <li>
+                        <strong>다양한 풋살 소셜 매치 경기 정보 연동</strong>
+                        <ul>
+                            <li>플랩풋볼, 퍼즐플레이, 어반풋볼, 위드풋살 사이트에서 경기 정보 수집</li>
+                            <li>HTTP 요청을 분석하여 GET, POST 요청 처리</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>경기 정보 필터링 기능</strong>
+                        <ul>
+                            <li>일자, 지역, 마감 여부, 성별 조건으로 경기 정보 검색</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>AWS 환경에서 서버 배포</strong>
+                        <ul>
+                            <li>VPC 및 EC2 인스턴스를 활용하여 Spring Boot 서버 배포</li>
+                            <li>SSL/TLS 인증서를 발급하여 HTTPS 통신 설정</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>CI/CD 자동화 구축</strong>
+                        <ul>
+                            <li>Github Actions를 활용한 CI/CD 파이프라인 구축</li>
+                            <li>자동화된 배포 환경 구성</li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                <i class="fa-brands fa-github"></i>
+                깃허브 : <a class="info-git"
+                    href="https://github.com/otfeb/KickConnect">https://github.com/otfeb/KickConnect</a>
+            </div>
+        </div>
+
+        <hr class="division">
+
+        <!-- 두 번째 프로젝트 -->
+        <div class="project">
+            <div class="project-description">
+                <h2>로그 수집/분석 및 성능 모니터링</h2>
+                <p class="project-period">2024.12.10 ~ 2024.12.24</p>
+                <h4><strong>Spring Boot 기반 API 성능 모니터링 및 Log 분석</strong></h4>
+                <p>
+                    Spring Boot 애플리케이션의 로그를 효율적으로 수집하고 시각화하여 성능을 모니터링하는 개인 프로젝트입니다.<br>
+                    ELK Stack을 활용하여 로그를 분석하고, JMeter 및 Scouter를 이용하여 API 성능을 최적화하는 과정을 경험하였습니다.
+                </p>
+                <div class="project-images">
+                    <div class="project-slider">
+                        <div class="slider-container">
+                            <img class="slider-image" src="/images/logs/log1.png" alt="로그 수집 시스템">
+                            <img class="slider-image" src="/images/logs/log2.png" alt="Kibana 대시보드">
+                            <img class="slider-image" src="/images/logs/log3.png" alt="JMeter 성능 테스트">
+                        </div>
+                        <div class="slider-buttons">
+                            <span class="prev">&#10094;</span>
+                            <span class="next">&#10095;</span>
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p class="role">💡<strong>구현 내용</strong></p>
+                <br><br>
+                <ul>
+                    <li>
+                        <strong>ELK Stack과 Spring Boot 연동</strong>
+                        <ul>
+                            <li>Spring Boot 로그를 Filebeat와 Logstash를 이용해 수집</li>
+                            <li>수집된 로그를 Elasticsearch로 전송하여 저장</li>
+                            <li>Kibana를 이용하여 로그 데이터를 커스텀 시각화</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>JMeter 및 Scouter를 활용한 성능 모니터링</strong>
+                        <ul>
+                            <li>JMeter로 API 부하 테스트 수행</li>
+                            <li>오픈소스 APM Scouter를 이용하여 성능 모니터링 및 분석</li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                <i class="fa-brands fa-github"></i>
+                깃허브 : <a class="info-git"
+                    href="https://github.com/otfeb/Load-Test">https://github.com/otfeb/Load-Test</a>
+            </div>
+        </div>
+
+        <hr class="division">
+
+        <!-- 세 번째 프로젝트 -->
         <br>
         <div class="project">
             <div class="project-description">
@@ -165,7 +278,7 @@
 
         <hr class="division">
 
-        <!-- 두 번째 프로젝트 -->
+        <!-- 네 번째 프로젝트 -->
         <div class="project">
             <div class="project-description">
                 <h2>Handtris</h2>
@@ -259,7 +372,7 @@
 
         <hr class="division">
 
-        <!-- 세번째 프로젝트 -->
+        <!-- 다섯 번째 프로젝트 -->
         <div class="project">
             <div class="project-description">
                 <h2>4B</h2>
@@ -319,7 +432,7 @@
 
         <hr class="division">
 
-        <!-- 네번째 프로젝트 -->
+        <!-- 여섯 번째 프로젝트 -->
         <div class="project">
             <div class="project-description">
                 <h2>HYUGO</h2>
