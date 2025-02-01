@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoSeok's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 소개 및 사진 -->
+    <header>
+        <div class="intro">
+            <h1>안녕하세요. <br>전천후 개발자를 지향하는 윤호석입니다.</h1>
+            <img src="/images/01.png" alt="" class="profile-photo">
+        </div>
+    </header>
+
+    <!-- ABOUT ME -->
+    <section id="about-me">
+        <h1><u>ABOUT ME</u></h1>
+        <br>
+        <div class="info-grid">
+            <div class="info-item">
+                <i class="fas fa-user"></i>
+                <span><strong>이름</strong><br> 윤호석</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-birthday-cake"></i>
+                <span><strong>생년월일</strong><br> 1997-02-16</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong>주소지</strong><br> 경기도 김포시</span>
+            </div>
+            <div class="info-item">
+                <i class="fa-brands fa-github"></i>
+                <span><strong>깃허브</strong><br> <a href="https://github.com/otfeb"
+                        class="info-git">https://github.com/otfeb</a></span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span><strong>이메일</strong><br> apeltms97@gmail.com</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span><strong>학력</strong><br> 을지대학교<br>(식품산업외식학과)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h1><u>SKILLS</u></h1>
+        <br>
+        <div class="skills-category">
+            <h2>Backend</h2>
+            <ul>
+                <li>Java</li>
+                <li>Jsp</li>
+                <li>Spring Boot</li>
+                <li>Spring Data JPA</li>
+                <li>Python</li>
+                <br>
+                <li>C</li>
+                <li>AWS</li>
+                <li>Docker</li>
+                <li>Elasticsearch</li>
+                <li>Logstash</li>
+                <li>Kibana</li>
+            </ul>
+        </div>
+        <div class="skills-category">
+            <h2 class="category">Frontend</h2>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>JQuery</li>
+                <li>React</li>
+            </ul>
+        </div>
+        <div class="skills-category">
+            <h2 class="category">Database</h2>
+            <ul>
+                <li>MySQL</li>
+                <li>Oracle</li>
+                <li>Redis</li>
+            </ul>
+        </div>
+        <div class="skills-category">
+            <h2 class="category">Tools</h2>
+            <ul>
+                <li>IntelliJ</li>
+                <li>VSCode</li>
+                <li>GitHub</li>
+                <li>Postman</li>
+                <br>
+                <li>Slack</li>
+                <li>Notion</li>
+                <li>Discord</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PROJECTS 섹션 -->
+    <section id="projects">
+        <h1><u>PROJECTS</u></h1>
+        <br>
+        <div class="project">
+            <div class="project-description">
+                <h2>CRYTHON</h2>
+                <p class="project-period">2024.08.03 ~ 2024.08.13</p>
+                <h4><strong>Digital Document 보안 솔루션</strong></h4>
+                <p>
+                    2024 블레이버스 해커톤 참가작으로 창업팀의 요구사항에 맞게 pdf 문서 보안 웹 사이트를 제작하였습니다.<br>
+                    팀 구성은 <strong>백엔드 3명</strong>, <strong>프론트엔드 2명</strong>, <strong>디자인 1명</strong>으로 <strong>총
+                        6명</strong>으로 구성된 팀 프로젝트이고 저는 백엔드를 담당하였습니다.<br>
+                    Spring boot와 MySQL을 사용하였고 배포는 GCP를 이용, CloudSQL와 GCS를 이용하여 데이터와 파일 객체를 저장하였습니다.
+                </p>
+                <div class="project-images">
+                    <div class="project-slider">
+                        <div class="slider-container">
+                            <img class="slider-image" src="/images/crython/main.png" alt="Crython 메인">
+                            <img class="slider-image" src="/images/crython/home.png" alt="Crython 홈">
+                            <img class="slider-image" src="/images/crython/architecture.png" alt="Crython 아키텍쳐">
+                        </div>
+                        <div class="slider-buttons">
+                            <span class="prev">&#10094;</span>
+                            <span class="next">&#10095;</span>
+                        </div>
+                        <!-- 페이지 구분자 추가 -->
+                        <div class="slider-dots">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p class="role">💡<strong>담당한 기능</strong></p>
+                <br><br>
+                <ul>
+                    <li>
+                        <strong>파일 업로드 및 다운로드 API</strong>
+                        <ul>
+                            <li>Google Cloud Storage(GCS) 연동 및 파일 객체 저장</li>
+                            <li>CloudSQL 연동 및 파일 메타 데이터 저장</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>파일 공유 API</strong>
+                        <ul>
+                            <li>Join문 사용하여 본인이 업로드한 파일뿐만 아니라 공유 받은 파일도 조회되도록 수정</li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                <i class="fa-brands fa-github"></i>
+                깃허브 : <a class="info-git"
+                    href="https://github.com/crython-guardians/crython-server">https://github.com/crython-guardians/crython-server</a>
+            </div>
+        </div>
+
+        <hr class="division">
+
+        <!-- 두 번째 프로젝트 -->
+        <div class="project">
+            <div class="project-description">
+                <h2>Handtris</h2>
+                <p class="project-period">2024.06.17 ~ 2024.07.20</p>
+                <h4><strong>핸드 모션을 활용한 실시간 1:1 대결 테트리스 게임</strong></h4>
+                <p>
+                    Media Pipe의 핸드 모션 인식을 활용한 실시간 1:1 대결 테트리스 게임입니다.<br>
+                    기존 테트리스 게임과는 다르게 조작 컨트롤러나 키보드를 이용하지 않고 손동작을 이용하여 테트리스 블록을 조작하는 방식으로<br>
+                    사용자가 단순히 게임을 플레이하는 것뿐 아니라, 몸을 사용하여 더욱 적극적으로 게임에 참여할 수 있는 색다른 경험을 제공하는 것을<br>
+                    목표로 기획하게 되었습니다.<br>
+                    팀 구성은 <strong>백엔드 4명</strong>, <strong>프론트엔드 2명</strong>으로 <strong>총 6명</strong>으로 구성된 팀 프로젝트이고 저는
+                    백엔드를 담당하였습니다.<br>
+                    WebSocket의 동작 방식, pub/sub 구조와 STOMP 프로토콜에 대해 깊이 있게 공부할 수 있었고<br>
+                    Redis를 사용하여 API 응답속도를 개선하는 경험도 하였습니다.<br>
+                    또한 API 명세서 작성, CORS 설정 등 프론트엔드와 협업하는 과정에서 많은 것을 배울 수 있었습니다.
+                </p>
+                <div class="project-images">
+                    <div class="project-slider">
+                        <div class="slider-container">
+                            <img class="slider-image" src="/images/handtris/Handtris01.png" alt="Handtris 로그인 화면">
+                            <img class="slider-image" src="/images/handtris/Handtris02.png" alt="Handtris 게임 화면">
+                            <img class="slider-image" src="/images/handtris/Handtris03.png" alt="Handtris 준비 화면">
+                            <img class="slider-image" src="/images/handtris/Handtris_Architecture.png"
+                                alt="Handtris 아키텍쳐">
+                            <img class="slider-image" src="/images/handtris/Handtris_NetworkFlow.png"
+                                alt="Handtris 네트워크 플로우">
+                            <div class="video-container">
+                                <!-- preload="metadata" 속성 없이 테스트 -->
+                                <video id="handtrisVideo" class="slider-image" controls>
+                                    <source src="/videos/demo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <div class="slider-buttons">
+                            <span class="prev">&#10094;</span>
+                            <span class="next">&#10095;</span>
+                        </div>
+                        <!-- 페이지 구분자 추가 -->
+                        <div class="slider-dots">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <p class="role">💡<strong>담당한 기능</strong></p>
+                <br>
+                <ul>
+                    <li>
+                        <strong>WebSocket `STOMP` 프로토콜을 사용하여 실시간성 보장</strong>
+                        <ul>
+                            <li>테트리스 블록의 좌표값, 컬러 등의 정보를 Text 형식으로 상대방 유저에게 전달</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Redis 캐시를 이용하여 API 호출 시간 단축</strong>
+                        <ul>
+                            <li>게임방과 유저 정보를 매핑해 저장</li>
+                            <li>유저가 나가면 Redis에서 정보 삭제</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>ChannelInterceptor를 이용해 요청 전처리</strong>
+                        <ul>
+                            <li>메시지를 가로채 요청 확인 및 수정</li>
+                            <li>나의 블록 정보를 보낼 때, 나도 그 메시지를 받아서 화면에 나의 블록과 상대방의 블록이 겹쳐서 그려지는 현상 발생</li>
+                            <ul>
+                                <li>Interceptor에서 상대방 정보를 Header에 담아 블록 정보 전달 API에 전달</li>
+                                <li>블록 정보 전달 API에서 Header에 담긴 상대방에게만 메시지를 보내도록 수정</li>
+                            </ul>
+                            <li>비정상적인 종료로 인한 연결 해제 요청일 경우 API를 호출하지 않아 Redis와 DB의 정합성이 깨지는 현상 발생</li>
+                            <ul>
+                                <li>소켓 연결이 해제되면 클라이언트에서 특정 메시지 전송</li>
+                                <li>Interceptor에서 이를 확인하고 정상적으로 API를 호출할 수 있도록 유도</li>
+                            </ul>
+                        </ul>
+                    </li>
+                    <li><strong>Junit과 Mockito를 이용한 유닛 단위 테스트 작성</strong></li>
+                </ul>
+                <br>
+                <i class="fa-brands fa-github"></i>
+                깃허브 : <a class="info-git"
+                    href="https://github.com/otfeb/BE-HandTris">https://github.com/otfeb/BE-HandTris</a>
+            </div>
+        </div>
+
+        <hr class="division">
+
+        <!-- 세번째 프로젝트 -->
+        <div class="project">
+            <div class="project-description">
+                <h2>4B</h2>
+                <p class="project-period">2023.11.10 ~ 2023.12.05</p>
+                <h4><strong>온라인 중고 거래 사이트</strong></h4>
+                <p>
+                    간편 결제 API를 사용한 온라인 중고 거래 사이트입니다.<br>
+                    6명이서 팀을 이루었고 저는 <strong>검색 API</strong>와 <strong>마이페이지</strong> 부분을 맡았습니다.<br>
+                    Spring boot와 MyBatis를 사용하였고 AWS를 이용하여 배포도 경험해 보았습니다.
+                </p>
+                <div class="project-images">
+                    <div class="project-slider">
+                        <div class="slider-container">
+                            <img class="slider-image" src="/images/4B/recently.gif" alt="">
+                            <img class="slider-image" src="/images/4B/like.gif" alt="">
+                            <img class="slider-image" src="/images/4B/soldout1.gif" alt="">
+                            <img class="slider-image" src="/images/4B/soldout2.gif" alt="">
+                        </div>
+                        <div class="slider-buttons">
+                            <span class="prev">&#10094;</span>
+                            <span class="next">&#10095;</span>
+                        </div>
+                        <!-- 페이지 구분자 추가 -->
+                        <div class="slider-dots">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p class="role">💡<strong>담당한 기능</strong></p>
+                <br><br>
+                <ul>
+                    <li>
+                        <strong>검색 API</strong>
+                        <ul>
+                            <li>인기, 최근 검색어 기능</li>
+                            <li>최근 검색어 중복 저장 방지</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>마이페이지</strong>
+                        <ul>
+                            <li>회원 정보 수정</li>
+                            <li>관심 상품 및 구매 내역, 판매 내역 조회</li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                <i class="fa-brands fa-github"></i>
+                깃허브 : <a class="info-git"
+                    href="https://github.com/otfeb/Final_Project-4B-">https://github.com/otfeb/Final_Project-4B-</a>
+            </div>
+        </div>
+
+        <hr class="division">
+
+        <!-- 네번째 프로젝트 -->
+        <div class="project">
+            <div class="project-description">
+                <h2>HYUGO</h2>
+                <p class="project-period">2023.09.08 ~ 2023.09.22</p>
+                <h4><strong>통합 휴게소 사이트</strong></h4>
+                <p>
+                    음식 주문과 입점 업체 이용 고객들이 리뷰를 남길 수 있는 휴게소 사이트입니다.<br>
+                    6명이서 팀을 이루었고 저는 <strong>입점 매장 페이지</strong>와 <strong>휴면 계정 기능</strong> 부분을 맡았습니다.<br>
+                    java와 jsp, javascript와 jQuery를 사용하여 백과 프론트 부분을 모두 경험했습니다.
+                </p>
+                <div class="project-images">
+                    <div class="project-slider">
+                        <div class="slider-container">
+                            <img class="slider-image" src="/images/hyugo/shopmenu1.gif" alt="">
+                            <img class="slider-image" src="/images/hyugo/shopmenu2.gif" alt="">
+                            <img class="slider-image" src="/images/hyugo/human1.gif" alt="">
+                            <img class="slider-image" src="/images/hyugo/human2.gif" alt="">
+                        </div>
+                        <div class="slider-buttons">
+                            <span class="prev">&#10094;</span>
+                            <span class="next">&#10095;</span>
+                        </div>
+                        <!-- 페이지 구분자 추가 -->
+                        <div class="slider-dots">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p class="role">💡<strong>담당한 기능</strong></p>
+                <br><br>
+                <ul>
+                    <li>
+                        <strong>매장 페이지 설계 및 구현</strong>
+                        <ul>
+                            <li>각 매장의 메뉴 CRUD 기능</li>
+                            <li>카테고리별 메뉴 조회</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>휴면 계정 기능</strong>
+                        <ul>
+                            <li>가입 후 일정 기간 로그인하지 않을 경우 휴면 계정 전환 및 해제 기능 구현</li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                <i class="fa-brands fa-github"></i>
+                깃허브 : <a class="info-git"
+                    href="https://github.com/otfeb/Sist_SemiProject">https://github.com/otfeb/Sist_SemiProject</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 최상단 이동 버튼 -->
+    <button id="scrollTopBtn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript 파일 추가 -->
+    <script src="script.js"></script>
+</body>
+
+</html>
